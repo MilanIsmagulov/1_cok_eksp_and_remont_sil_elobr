@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./scripts/main.js" defer></script>
+    <title>Эксплуатация и ремонт силового электрооборудования
+    </title>
+</head>
+<body>
+    <div class="main_window">
+        <div class="black_header">
+            <h1>
+                Эксплуатация и ремонт силового электрооборудования
+
+            </h1>
+            <div class="links_black_header">
+                <a href="../../../index.html">На главную</a>
+                <a href="../../../new_material/page_new_mat.html" class="disabled_button">Назад</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="quiz_window">
+                <div id="quiz_part">
+                    <div class="window_header">
+                        <div class="questions" id="question_number_1">
+                            
+                        </div>
+                        <div class="number_marker">
+                            <img id="open_popup_button" src="./content/description.svg" alt="description">
+                            <p class="number_description">3/10</p>
+                        </div>
+
+                    </div>
+                    <div class="theory_eom" id="theory_eom_2">
+                        <div style="margin: 35px; flex-direction: column;" class="image_with_text">
+
+                            <div class="text_part">
+                                <p style="font-size: 25px; width: 80%;">
+                                    <b>Проверка соответствия  уставок  автоматических выключателей
+                                    </b><br><br>
+                                    Для проведения испытаний тепловых расцепителей необходимо подключить выводы аппарата к вводам автоматического выключателя. Затем подается ток и отмечается время, через которое происходит срабатывание механизма расцепления. <b>Испытание проводится поэтапно с учетом следующих условий: </b><br><br>
+                                    1. На неразогретый прибор подается ток, превышающий номинальное значение в 1,13 раза. Расцепитель теплового типа не должен срабатывать в течение 1 часа при номинальном токе менее 63 А и минимум 2 часов при номинальном токе выше 63 А. <br><br>
+                                    2. Сразу после завершения первого этапа на оборудование подается ток, превышающий номинальное значение в 1,45 раза. Расцепитель должен сработать в течение 1 часа при токе ниже 63 А или в течение 2 часов при токе выше 63 А. <br><br>
+                                    3. После завершения второго этапа с выключателя снимается напряжение, чтобы он вернулся в первоначальное «холодное» состояние. Затем на прибор подается ток, превышающий номинальное значение в 2,55 раза. Если ток меньше 32 А, то тепловой расцепитель должен сработать за 1 минуту, а при токе выше 32 А – за 2 минуты. <br><br>                                  
+                                </p>
+                                <p style="font-size: 25px;">
+                                    Аналогичным образом выполняют проверку срабатывания электромагнитных расцепителей. <br>
+                                    Сначала на «холодный» автомат подают ток в зависимости от его типа (B, C, D), а именно 3, 5 или 10 А. <br>
+                                    Мгновенный расцепитель должен вызвать отключение за 0,1 секунды или более. Затем автомат возвращается в холодное состояние и на него подается ток в зависимости от типа расцепителя (5, 10 или 20 А). Должно произойти срабатывание устройства менее, чем за 0,1 секунды. 
+                                    При испытании ток, который подается на прибор, постепенно увеличивается от минимального значения до верхней границы. Это происходит практически мгновенно. <br>
+                                    Во время срабатывания расцепителя записываются величина тока в этот момент и время, прошедшее с достижения необходимого значения тока.                                     
+
+                                </p>
+                            </div>
+                            <div style="display: flex; flex-direction: row;" class="images">
+                                <div class="image_part">
+                                    <div class="header_image">
+                                        <h3> 
+                                        </h3>
+                                        <button id="open_popup_button_2"><img src="./content/zoom_up.svg" alt="zup"></button>
+                                    </div>
+                                    <img width="60%" src="./content/2.jpg" alt="">
+                                </div>
+                                <div class="image_part">
+                                    <div class="header_image">
+                                        <h3>  
+                                        </h3>
+                                        <button id="open_popup_button_3"><img src="./content/zoom_up.svg" alt="zup"></button>
+                                    </div>
+                                    <img width="60%" src="./content/4.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step_marker_and_buttons">
+                        <div class="step_marker">
+                            
+                        </div>
+                        <div class="main_buttons">
+                            <button id="check_button_0" onclick="location.href='../javascript_quiz_app_3/index.html'">
+                                Назад
+                            </button>
+                            <button id="check_button_3" onclick="location.href='../javascript_quiz_app_5/index.html'">
+                                Далее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="popup1" class="popup close">
+            <div class="popup_body">
+                <div class="popup_content">
+                    <div class="popup_header">
+                        <h3> </h3>
+                        <button onclick="closePopUp()" id="close_popup_button_1"><img src="./content/close.svg" alt="close"></button>
+                    </div>
+                    <div class="popup_text">
+                        <h3>1. Ознакомьтесь с правилами техники безопасности.</h3>
+                        <h3>2. Установите соответствие между видами выполняемых работ в электроустановках и составом бригады  для выполнения этих работ.</h3>
+                        <h3>3. Установите очередность операций  при выводе в ремонт электродвигателя.</h3>
+                        <h3>4. Изучите материалы по проверке соответствия  уставок  автоматических выключателей.</h3>
+                        <h3>5. Установите очередность  операций при проверке электромагнитного расцепителя автоматического выключателя.</h3>
+                        <h3>6. Изучите материалы по проверке соответствия  токов плавких вставок предохранителей.</h3>
+                        <h3>7. Установите соответствие между требованиями и условиями выбора уставок аппаратов защиты.</h3>
+                        <h3>8. Изучите материалы по эксплуатация и ремонту силовых распределительных шкафов. неисправности распределительных устройств и способы их устранения.</h3>
+                        <h3>9. Укажите, какие виды работ относятся к указанным мероприятиям.</h3>
+                        <h3>10. Изучите материал по проверке сопротивления изоляции обмоток электродвигателей.</h3>
+                        <h3>11. Выберите, не менее скольких должно быть сопротивление изоляции для обмоток статора асинхронного электродвигателя напряжением до 660 В.</h3>
+                        <h3>12. Изучите материал по проверке сопротивления изоляции отходящих линий.</h3>
+                        <h3>13. Укажите, прибором, какого типа выполняется измерение сопротивления изоляции кабеля.</h3>
+                        <h3>14. Изучите материал по определению маркировки выводов обмотки трехфазного асинхронного двигателя.</h3>
+                        <h3>15. Выберите, какая схема соединения роторных обмоток собрана в коробке выводов.</h3>
+                        <h3>16. Изучите материалы по выявлению неисправностей в асинхронных электродвигателях.</h3>
+                        <h3>17. Установите правильную очередность устранения неисправности.</h3>
+                        <h3>18. Рассмотрите составление дефектной ведомости при ремонте асинхронного  электродвигателя.</h3>
+                        <h3>19. Укажите, с какой целью осуществляется дефектация при ремонте электродвигателя.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="popup2" class="popup close">
+            <div class="popup_body">
+                <div class="popup_content">
+                    <div class="popup_header">
+                        <h3> </h3>
+                        <button id="close_popup_button_2"><img src="./content/close.svg" alt="close"></button>
+                    </div>
+                    <div class="popup_text">
+                        <img height="100%" src="./content/3.jpg" alt="big_imge">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup3" class="popup close">
+            <div class="popup_body">
+                <div class="popup_content">
+                    <div class="popup_header">
+                        <h3> </h3>
+                        <button id="close_popup_button_3"><img src="./content/close.svg" alt="close"></button>
+                    </div>
+                    <div class="popup_text">
+                        <img height="100%" src="./content/5.jpg" alt="big_imge">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
