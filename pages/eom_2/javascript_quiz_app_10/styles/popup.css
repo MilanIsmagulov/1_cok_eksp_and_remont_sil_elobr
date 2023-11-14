@@ -192,10 +192,7 @@
 
 .theory_eom{
     flex-direction: column;
-    height: 565px;
-    overflow-y: auto;
     margin-right: 25px;
-    
 }
 
 .image_part{
@@ -298,9 +295,14 @@
         display: flex;
     }
 
-    .theory_eom{
-        height: 400px;
+    #images_second_2{
+        flex-direction: column !important;
     }
+
+    .text_part{
+        flex-direction: column;
+    }
+
     .content{
         margin-right: 0;
     }

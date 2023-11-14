@@ -3,7 +3,7 @@ let checkAnwserButton = document.querySelector('#control_button_2')
 let reloadButton = document.querySelector('#control_button_3')
 let nextButton = document.querySelector('#control_button_4')
 // let 
-const anwserArr = ['Измерить напряжение на выводах обмоток статора', 'Замерить значение тока во всех трех фазах статора', 'Осмотреть  выключатель или предохранитель', 'Проверить  мегаомметром  отсутствие обрыва в цепи',];
+const anwserArr = ['Измерить напряжение на выводах обмоток статора', 'Замерить значение тока во всех трех фазах статора', 'Осмотреть выключатель или предохранитель', 'Проверить мегаомметром отсутствие обрыва в цепи',];
 
 
 function reloadPage(){

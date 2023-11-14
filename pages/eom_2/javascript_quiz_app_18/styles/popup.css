@@ -1,5 +1,5 @@
 .popup_text{
-    height: 600px;
+    height: 90%;
     overflow-y: auto;
     scroll-snap-align: start;
     padding: 15px;
@@ -110,9 +110,8 @@
 .popup_content {
     background-color: white;
     color: black;
-    min-width: 400px;
-    max-width: 1700px;
-    min-height: 60vh;
+    width: clamp(300px,90vw,1900px) !important;
+    height: clamp(500px,80vh,1000px) !important;
     border-radius: 25px;
     padding: 25px;
 }
@@ -192,8 +191,6 @@
 
 .theory_eom{
     flex-direction: column;
-    height: 565px;
-    overflow-y: auto;
     margin-right: 25px;
     
 }
@@ -285,22 +282,21 @@
 }
 
 @media (max-width: 1180px) {
-    .black_header{
-        height: 120px;
-    }
-
-
     .black_header h1{
         width: 50%;
     }
 
     .step_marker_and_buttons{
         display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 25px !important;
     }
 
-    .theory_eom{
-        height: 400px;
+    .step_marker{
+        margin-bottom: 25px;
     }
+
     .content{
         margin-right: 0;
     }
@@ -317,6 +313,5 @@
     .popup_text{
         display: flex;
         align-items: center;
-        height: 500px;
     }
 }

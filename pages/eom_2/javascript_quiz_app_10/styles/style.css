@@ -334,10 +334,6 @@ input:disabled {
         display: flex;
         width: 93vw;
     }
-
-    .theory_eom{
-        height: 600px;
-    }
     .content{
         margin-right: 0;
     }
@@ -350,5 +346,13 @@ input:disabled {
 }
 
 @media (max-width: 1180px) {
-
+    .step_marker{
+        margin-left: 0;
+        margin-bottom: 25px;
+    }
+    .step_marker_and_buttons{
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 25px;
+    }
 }

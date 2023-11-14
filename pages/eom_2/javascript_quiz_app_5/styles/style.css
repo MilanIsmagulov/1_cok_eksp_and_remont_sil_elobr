@@ -20,7 +20,7 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 600px;
+	height: clamp(570px,60vh,900px);
 }
 
 .left_image{
@@ -188,7 +188,7 @@ ul li div{
 	padding-left: 25px;
 	background-color: rgb(250, 250, 250);
 	font-weight: 600;
-	font-size: 25px;
+	font-size: 20px;
 	border: solid 0px #00000080;
 	width: 650px;
 	margin: 10px;
@@ -301,8 +301,15 @@ ul li div{
 	}
 }
 
-@media (max-width: 1180px){
-	.black_header{
-		height: 180px;
+@media (max-width: 1180px) {
+    .black_header{
+        height: 180px;
+    }
+	.step_marker{
+		margin-bottom: 25px;
+	}
+	.button_part{
+		flex-direction: column;
+		padding-bottom: 25px;
 	}
 }

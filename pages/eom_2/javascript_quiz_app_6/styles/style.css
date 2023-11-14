@@ -17,7 +17,6 @@ body{
     background: #fff;
     height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
 }
 
 .main_window{
@@ -192,9 +191,9 @@ input:disabled {
 }
 
 @media (max-width: 1180px) {
-    body{
-        width: 100%;
-
+    .images{
+        align-items: center;
+        flex-direction: column !important;
     }
 
     .answers_btn form {

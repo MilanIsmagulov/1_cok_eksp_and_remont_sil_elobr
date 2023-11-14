@@ -93,7 +93,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 95px;
     color: white;
     background-color: black;
 }
@@ -105,9 +104,13 @@ body{
     padding-right: 30px;
     border: solid 2px;
     border-radius: 35px;
+    min-width: 165px;
     width: 300px;
-    margin-left: 25px;
     transition: all 0.3s;
+}
+
+.links_black_header{
+    min-width: 165px;
 }
 
 .black_header a:hover{

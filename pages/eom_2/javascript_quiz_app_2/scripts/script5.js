@@ -1,5 +1,11 @@
-const anwserArr = [['двум лицам, одно должно иметь квалификационную группу по электробезопасности ІІІ, второе – группу IV или V старшее по должности'],['двум лицам, одно должно иметь квалификационную группу по электробезопасности  не ниже IV'],['двум лицам,  одно должно иметь квалификационную группу по электробезопасности не ниже ІІІ']]; //Ответы в правильном порядке
-const text = ["до 1000 В", "до 380 В", "свыше 100 В"]
+const anwserArr = [
+['двум лицам, одно должно иметь квалификационную группу по электробезопасности ІІІ, второе – группу IV или V старшее по должности'],
+['двум лицам, одно должно иметь квалификационную группу по электробезопасности не ниже IV'],
+['двум лицам, одно должно иметь квалификационную группу по электробезопасности не ниже ІІІ'],
+]; //Ответы в правильном порядке
+
+
+const text = ["до 1000 В","до 380 В","выше 1000 В"]
 
 const list = document.getElementById('list');
 let listItems = [];
@@ -9,12 +15,14 @@ function reloadWindow(){
     window.location.reload();
 }
 
+console.log(anwserArr)
+
 let numberOfQuestion = 2; 
 let numberOfQuestionSum = 19;
 
 let textOfQuestionPlace = document.querySelector('#question_number_1')
 
-textOfQuestionPlace.innerHTML = '<p>' + '<span>' + numberOfQuestion +  '. ' + '</span>'  + 'Установите соответствие между видами выполняемых работ в электроустановках и составом бригады  для выполнения этих работ.' + '</p>' + '<span style="margin-left: 25px; font-size: clamp(20px,1vw,30px); font-weight: 700;"> Работы в электроустановках по проверке, испытанию и ремонту связанные с подачей напряжения разрешено выполнять</span>'
+textOfQuestionPlace.innerHTML = '<p>' + '<span>' + numberOfQuestion +  '. ' + '</span>'  + 'Установите соответствие между видами выполняемых работ в электроустановках и составом бригады  для выполнения этих работ.' + '</p>' + '<span style="margin-left: 25px; font-size: clamp(20px,1vw,30px); font-weight: 700;"> Работы в электроустановках по проверке, испытанию и ремонту, связанные с подачей напряжения, разрешено выполнять:</span>'
 
 let stepMarkerPlace = document.querySelector('.step_marker');
 console.log("stepMarkerPlace")
@@ -112,12 +120,12 @@ function checkAnwser5() {
     listItems.forEach((item, index) => {
 
         const itemName = item.querySelector('.item').innerText.trim()
-        
+        console.log(itemName)
+
         if (itemName !== anwserArr[index].join(',')) {
             item.classList.add('incorrect')
             localStorage.setItem('answer_' + numberOfQuestion, JSON.stringify({questionPlace: false}));
         } else {
-            
             item.classList.remove('correct')
             item.classList.add('correct')
         }
@@ -131,14 +139,11 @@ function addEventListeners() {
     const dragListItems = document.querySelectorAll('.list li');
 
     draggables.forEach((draggable) => {
-        // draggable.addEventListener('dragstart', dragStart);
+
     });
 
     dragListItems.forEach((item) => {
-        // item.addEventListener('dragover', dragOver);
-        // item.addEventListener('drop', dragDrop);
-        // item.addEventListener('dragenter', dragEnter);
-        // item.addEventListener('dragleave', dragLeave);
+
     });
 }
 

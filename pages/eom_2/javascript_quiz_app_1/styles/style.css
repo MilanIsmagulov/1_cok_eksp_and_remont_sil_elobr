@@ -90,6 +90,26 @@ body{
     height: 55%;
 }
 
+.questions div p {
+    margin-left: 0 !important;
+}
+
+p{
+    margin-left: 35px !important;
+}
+
+.image_with_text{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.image_with_text img{
+    width: 25% !important;
+    margin-bottom: 25px;
+}
+
 .ans_btn{
     display: flex;
     align-items: center;
@@ -235,6 +255,10 @@ input:disabled {
 
     }
 
+    .image_with_text img{
+        width: 60% !important;
+        margin-bottom: 25px;
+    }
 
     .theory_eom p {
         margin-top: 10px;
@@ -371,7 +395,10 @@ input:disabled {
 }
 
 @media (max-width: 820px) {
-
+    
+    p{
+        margin-left: 0 !important;
+    }
     .image_with_text{
         display: flex;
         align-items: center;

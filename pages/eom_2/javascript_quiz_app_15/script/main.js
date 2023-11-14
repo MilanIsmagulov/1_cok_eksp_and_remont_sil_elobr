@@ -28,18 +28,17 @@ let mainWindow = document.querySelector('.main_window')
 // Массив с вопросами
 let mainQuestions = [
     {
-        text: 'Для обмоток статора асинхронного электродвигателя напряжением до 660 В сопротивление изоляции должно быть не менее:',
-        right: [2,],
+        text: 'Какая схема соединения роторных обмоток собрана в коробке выводов:',
+        right: [0],
         type: 1,
         points: 100,
-        answers: ['0,5 МОм при температуре 10-300С и не менее 1,0 МОм при температуре 600С', '1 МОм при температуре 10-300С и не менее 1,5 МОм при температуре 600С', '1 МОм при температуре 10-300С и не менее 0,5 МОм при температуре 600С', ],
+        answers: ['звезда', 'треугольник', 'зигзаг', ],
     },
 ];
 
 let numberOfQuestion = 11+4; 
 let numberOfQuestionSum = 19;
-
-
+let numberOfEOM = 2;
 
 
 // Цикл создающий модальные окна, также пушит вопросы и ответы
@@ -284,23 +283,37 @@ for (i = 0; i < mainQuestions.length; i++){
     nextBtn.id = 'check_button_3'
     nextBtn.innerText = 'Далее'
     nextBtn.classList.add('disabled_button')
-    nextBtn.setAttribute('onclick', `location.href='../javascript_quiz_app_${numberOfQuestion+1}/index.html'`)
+    
+    if (numberOfQuestion !== numberOfQuestionSum){
+        nextBtn.setAttribute('onclick', `location.href='../javascript_quiz_app_${numberOfQuestion+1}/index.html'`)
+    } else {
+        nextBtn.setAttribute('onclick', `location.href='../javascript_result_page/index.html'`)
+    }
 
     divBtn.appendChild(nextBtn)
+    let checkButton = document.querySelector('#check_button_0')
+    checkButton.disabled = true
 
-
-
-
+    let formDivInput = document.querySelectorAll('input')
+    formDivInput.forEach(input => {
+        input.addEventListener('click', function(){
+            if (input.checked === true){
+                checkButton.disabled = false
+            }
+        })
+        input.addEventListener('click', function(){
+            if (input.checked === false){
+                checkButton.disabled = true
+            }
+        })
+    })
+    
     //Добавление ивента для проверки ответов
 
     checkAnswerBtn.addEventListener('click',function(event)
     {
         let inputsBlock = document.querySelectorAll('.answer_div')
         inputsBlock.forEach(inputs =>{
-            localStorage.setItem('answer_' + numberOfQuestion, JSON.stringify({questionPlace: false}));
-            nextBtn.classList.remove('disabled_button')
-            nextBtn2.classList.remove('disabled_button')
-            checkAnswerBtn.classList.add('disabled_button')
             inputs.children[0].disabled = true
         })
         let rightcheck = false
@@ -362,7 +375,9 @@ for (i = 0; i < mainQuestions.length; i++){
                     
                     elem.classList.add('correct')
                     nextBtn.classList.remove('disabled_button')
-                    nextBtn2.classList.remove('disabled_button')
+                    if (numberOfEOM != 3){
+                        nextBtn2.classList.remove('disabled_button')
+                    }
                     checkAnswerBtn.classList.add('disabled_button')
                 }
                 else
@@ -371,7 +386,9 @@ for (i = 0; i < mainQuestions.length; i++){
                     elem.classList.add('incorrect')
                     rightcheck=false
                     nextBtn.classList.remove('disabled_button')
-                    nextBtn2.classList.remove('disabled_button')
+                    if (numberOfEOM != 3){
+                        nextBtn2.classList.remove('disabled_button')
+                    }
                     checkAnswerBtn.classList.add('disabled_button')
 
                 }
@@ -381,7 +398,11 @@ for (i = 0; i < mainQuestions.length; i++){
                 //Выделение правильных ответов, если они не выбраны
                 if (mainQuestions[question_number].right.indexOf(counter) != -1){
                     localStorage.setItem('answer_' + numberOfQuestion, JSON.stringify({questionPlace: false}));
-                    elem.classList.add('correct')
+                    if (numberOfEOM != 3) {
+                        elem.classList.add('correct')
+                    } else {
+                        elem.classList.add('correct2')
+                    }
                 }
             }
             counter++
@@ -399,14 +420,7 @@ for (i = 0; i < mainQuestions.length; i++){
         closeButton.innerHTML = '<img src="./content/close.svg" alt="close_popup">';
         document.getElementById('popup_content_'+question_number).firstElementChild.appendChild(closeButton);
 
-        
-
-
-
-
     })
-
-
 
 }; 
 //--------------------------------
@@ -440,37 +454,21 @@ function showQuestion(i){
     popUpArr[i].classList.remove('closed');  
 };
 
+function openPopUp2(){
+    let popupWindow = document.querySelector('#popup1')
+    popupWindow.classList.remove('close')
+}
+
+function closePopUp2(){
+    let popupWindow = document.querySelector('#popup1')
+    popupWindow.classList.add('close')
+}
 
 
 //Сложение очков, для получения счёта( я не знаю зачем тут нужен был массив)
 
 
 
-let openPopUpButton2 = document.querySelector('#open_popup_button')
-let closePopUpButton2 = document.querySelector('#close_popup_button_1')
-let popUpWindow2 = document.querySelector('#popup1')
-
-
-openPopUpButton2.addEventListener('click', function(){
-    popUpWindow2.classList.remove('close')
-})
-
-closePopUpButton.addEventListener('click', function(){
-    popUpWindow2.classList.add('close')
-})
-
-let openPopUpButton3 = document.querySelector('#open_popup_button_2')
-let closePopUpButton3 = document.querySelector('#close_popup_button_2')
-let popUpWindow3 = document.querySelector('#popup2')
-
-
-openPopUpButton3.addEventListener('click', function(){
-    popUpWindow3.classList.remove('close')
-})
-
-closePopUpButton3.addEventListener('click', function(){
-    popUpWindow3.classList.add('close')
-})
 
 
 

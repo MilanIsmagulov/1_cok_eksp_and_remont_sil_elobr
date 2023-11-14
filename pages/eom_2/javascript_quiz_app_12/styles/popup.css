@@ -190,10 +190,15 @@
     cursor: pointer;
 }
 
+
+
+.text_part img{
+    float: left;
+    object-fit: contain !important;
+}
+
 .theory_eom{
     flex-direction: column;
-    height: 565px;
-    overflow-y: auto;
     margin-right: 25px;
     
 }
@@ -285,10 +290,47 @@
 }
 
 @media (max-width: 1180px) {
-    .black_header{
-        height: 120px;
+    .text_part{
+        display: flex !important;
+        flex-direction: column !important;
+        margin-right: 25px;
+        
     }
 
+    body{
+        width: 100%;
+
+    }
+
+    .theory_eom img{
+        width: 80%;
+    }
+
+    .answers_btn form div {
+        width: 700px;
+    }
+    .choices_div2{
+        width: 700px;
+    }
+    .question_part #question {
+        padding: 10px;
+        margin: 10px;
+        margin-top: 10px;
+    }
+    .button_part {
+        margin-top: 5px;
+        padding-bottom: 0px;
+    }
+
+    .step_marker_and_buttons {
+        width: 95vw;
+        padding-bottom: 50px;
+        
+    }
+
+    .main_buttons button {
+        width: 130px;
+    }
 
     .black_header h1{
         width: 50%;
@@ -296,10 +338,6 @@
 
     .step_marker_and_buttons{
         display: flex;
-    }
-
-    .theory_eom{
-        height: 400px;
     }
     .content{
         margin-right: 0;
@@ -320,3 +358,39 @@
         height: 500px;
     }
 }
+
+@media (max-width: 820px) {
+    .links_black_header a{
+        margin-left: 0 !important;
+        min-width: 165px;
+    }
+
+    .step_marker_and_buttons{
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 25px !important;
+    }
+
+    .step_marker{
+        margin-bottom: 25px;
+    }
+
+    .black_header h1{
+        width: 70%;
+    }
+
+    .step_marker_and_buttons{
+        display: flex;
+        width: 93vw;
+    }
+    .content{
+        margin-right: 0;
+    }
+    .first{
+        flex-direction: column;
+    }
+    .second{
+        flex-direction: column;
+    }
+}
+

@@ -1,5 +1,5 @@
 .popup_text{
-    height: 600px;
+    height: 87% !important;
     overflow-y: auto;
     scroll-snap-align: start;
     padding: 15px;
@@ -110,9 +110,8 @@
 .popup_content {
     background-color: white;
     color: black;
-    min-width: 700px;
-    max-width: 1700px;
-    min-height: 80vh;
+    width: clamp(300px,90vw,1900px) !important;
+    height: clamp(500px,80vh,1000px) !important;
     border-radius: 25px;
     padding: 25px;
 }
@@ -296,8 +295,14 @@
         width: 50%;
     }
 
-    .step_marker_and_buttons{
+    .button_part{
         display: flex;
+        flex-direction: column !important;
+        padding-bottom: 25px !important;
+    }
+    
+    .step_marker{
+        margin-bottom: 25px;
     }
 
     .theory_eom{
