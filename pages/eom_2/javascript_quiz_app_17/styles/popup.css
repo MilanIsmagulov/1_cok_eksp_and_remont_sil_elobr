@@ -323,7 +323,7 @@
     }
     .popup_text{
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         height: 500px;
     }
 }

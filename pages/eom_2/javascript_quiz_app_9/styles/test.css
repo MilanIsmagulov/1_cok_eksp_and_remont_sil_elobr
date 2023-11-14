@@ -294,7 +294,7 @@ margin-top: 100px;
   .numbers{
     display: flex;
     flex-direction: column;
-    height: 48vh;
+
 
     justify-content: space-around;
   }
@@ -386,9 +386,7 @@ margin-top: 100px;
         padding-right: 40px;
         width: 400px;
     }
-    .numbers {
-        height: 60vh;
-    }
+
     .answers_btn {
         width: 100%;
         display: flex;
@@ -429,9 +427,18 @@ margin-top: 100px;
         display: none;
     }
 
-    .numbers {
-        height: 80vh;
+    .step_marker_and_buttons{
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 25px !important;
     }
+
+    .step_marker{
+        margin-bottom: 25px;
+    }
+
+
+
     .answers_btn {
         width: 100%;
         display: flex;

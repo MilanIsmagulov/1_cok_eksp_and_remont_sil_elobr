@@ -332,12 +332,16 @@ input:disabled {
 
     .step_marker_and_buttons{
         display: flex;
+        align-items: center;
+        flex-direction: column;
         width: 93vw;
+        padding-bottom: 25px !important;
     }
 
-    .theory_eom{
-        height: 600px;
+    .step_marker{
+        margin-bottom: 25px;
     }
+
     .content{
         margin-right: 0;
     }

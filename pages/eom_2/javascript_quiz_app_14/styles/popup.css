@@ -286,8 +286,11 @@
         width: 50%;
     }
 
+    
+
     .step_marker_and_buttons{
         display: flex;
+        padding-bottom: 25px !important;
     }
 
     .content{
