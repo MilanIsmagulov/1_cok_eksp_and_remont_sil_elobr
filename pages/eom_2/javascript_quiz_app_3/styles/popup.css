@@ -1,5 +1,5 @@
 .popup_text{
-    height: 600px;
+    height: 90%;
     overflow-y: auto;
     scroll-snap-align: start;
     padding: 15px;
@@ -110,9 +110,8 @@
 .popup_content {
     background-color: white;
     color: black;
-    min-width: 700px;
-    max-width: 1700px;
-    min-height: 80vh;
+    width: clamp(300px,90vw,1900px);
+    height: clamp(500px,80vh,1000px);
     border-radius: 25px;
     padding: 25px;
 }
@@ -313,13 +312,10 @@
     .popup_body{
         height: 50vh;
     }
-    .popup_content {
-        height: 50vh;
-    }
     .popup_text{
         display: flex;
-        align-items: center;
-        height: 500px;
+        align-items: flex-start;
+        height: 85%;
     }
 }
 

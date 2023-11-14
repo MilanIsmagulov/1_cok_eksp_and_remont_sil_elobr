@@ -14,7 +14,7 @@ let numberOfQuestionSum = 19;
 
 let textOfQuestionPlace = document.querySelector('#question_number_1')
 
-textOfQuestionPlace.innerHTML = '<p>' + '<span>' + numberOfQuestion +  '. ' + '</span>'  + 'Установите соответствие между видами выполняемых работ в электроустановках и составом бригады  для выполнения этих работ.' + '</p>' + '<span style="margin-left: 25px; font-size: 25px; font-weight: 700;"> Работы в электроустановках по проверке, испытанию и ремонту связанные с подачей напряжения разрешено выполнять</span>'
+textOfQuestionPlace.innerHTML = '<p>' + '<span>' + numberOfQuestion +  '. ' + '</span>'  + 'Установите соответствие между видами выполняемых работ в электроустановках и составом бригады  для выполнения этих работ.' + '</p>' + '<span style="margin-left: 25px; font-size: clamp(20px,1vw,30px); font-weight: 700;"> Работы в электроустановках по проверке, испытанию и ремонту связанные с подачей напряжения разрешено выполнять</span>'
 
 let stepMarkerPlace = document.querySelector('.step_marker');
 console.log("stepMarkerPlace")

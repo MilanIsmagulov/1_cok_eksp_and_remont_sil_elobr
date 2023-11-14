@@ -20,7 +20,7 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 70vh;
+	height: clamp(600px,70vh,900px);
 }
 
 .left_image{
@@ -305,4 +305,11 @@ ul li div{
     .black_header{
         height: 180px;
     }
+	.step_marker{
+		margin-bottom: 25px;
+	}
+	.button_part{
+		flex-direction: column;
+		padding-bottom: 25px;
+	}
 }

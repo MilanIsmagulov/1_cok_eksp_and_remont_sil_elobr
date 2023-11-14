@@ -55,7 +55,7 @@ body{
 
 
 .quiz_window p{
-    font-size: 30px;
+    font-size: clamp(20px,2vw,35px);
     padding: 25px;
     color: rgb(255, 114, 118);
     font-weight: 700;
@@ -80,7 +80,7 @@ body{
 }
 
 .questions p{
-    font-size: 30px;
+    font-size: clamp(25px,2vw,35px);
     padding: 25px;
     color: rgb(255, 114, 118);
     font-weight: 700;
@@ -294,7 +294,6 @@ margin-top: 25px;
   .numbers{
     display: flex;
     flex-direction: column;
-    height: 48vh;
 
     justify-content: space-around;
   }
@@ -349,7 +348,10 @@ margin-top: 25px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
   }
 
-
+  .step_marker_and_buttons{
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
 
   .list li.correct .item {
 
@@ -371,13 +373,13 @@ margin-top: 25px;
         position: relative;
     }
     .item {
-        font-size: 22px;
+        font-size: inherit;
         padding-left: 10px;
         padding-top: 5px;
         padding-bottom: 5px;
         padding-right: 10px;
         height: 160px;
-        width: 500px;
+        width: 48vw;
     }
 
     .number{
@@ -385,9 +387,6 @@ margin-top: 25px;
         border-radius: 5px 75px 75px 5px;
         padding-right: 40px;
         width: 400px;
-    }
-    .numbers {
-        height: 60vh;
     }
     .answers_btn {
         width: 100%;
@@ -398,22 +397,30 @@ margin-top: 25px;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
     .drag1{
         width: 600px;
     }
     .step_marker_and_buttons{
+        flex-direction: column;
+        align-items: center;
         margin-top: 100px;
         position: relative;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
     }
     .item {
-        font-size: 15px;
+        font-size: inherit;
         padding-left: 10px;
         padding-top: 5px;
         padding-bottom: 5px;
         padding-right: 10px;
-        height: 160px;
-        width: 350px;
+
+        width: 48vw;
+    }
+
+    .step_marker{
+        margin-bottom: 25px;
     }
 
     .number{
