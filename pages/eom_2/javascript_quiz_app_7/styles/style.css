@@ -53,8 +53,11 @@ body{
     border: solid 2px;
     border-radius: 35px;
     width: 300px;
-    margin-left: 25px;
     transition: all 0.3s;
+}
+
+.links_black_header{
+    min-width: 165px;
 }
 
 .black_header a:hover{
@@ -196,10 +199,10 @@ input:disabled {
         width: 100%;
 
     }
-    
     .black_header{
         height: 180px;
     }
+
     .black_header h1{
         width: 60%;
     }
