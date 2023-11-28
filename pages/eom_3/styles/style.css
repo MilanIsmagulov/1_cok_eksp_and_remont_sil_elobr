@@ -20,15 +20,14 @@ header {
 }
 
 header h1 {
-    font-size: 48px;
+    font-size: 35px !important;
 }
 
 .header_wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4vh;
-    padding: 2vw;
+    padding: 1vw;
 }
 
 .header_links {
@@ -151,8 +150,8 @@ header h1 {
 }
 
 .logo_wrap img{
-    padding-top: 25px;
-    height: 70%;
+    padding: 25px;
+    height: 700px;
     width: auto;
 }
 
@@ -229,10 +228,6 @@ header h1 {
         margin-left: 20px;
     }
 
-    .header_wrap {
-        height: 60px;
-    }
-    
     .question_wrap button {
         font-size: 30px;
         padding: 10px;
@@ -413,5 +408,14 @@ header h1 {
         font-size: 1.25vw;
         width: 60px;
         height: 20px;
+    }
+}
+
+@media (max-width: 540px){
+    .question button{
+        font-size: 30px;
+        border-radius: 15px;
+        width: 100px;
+        height: 100px;
     }
 }
