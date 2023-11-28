@@ -216,7 +216,7 @@ header h1 {
 
 @media (width <= 1280px) {
     header h1 {
-        font-size: 40px;
+        font-size: 30px !important;
     }
 
     .header_links a {
