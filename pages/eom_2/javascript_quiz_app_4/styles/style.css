@@ -25,6 +25,10 @@ body{
     width: 100%;
 }
 
+.img_popup{
+    width: auto !important;
+}
+
 .black_header{
     padding: 30px;
     display: flex;

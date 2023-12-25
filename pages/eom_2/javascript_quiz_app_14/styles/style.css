@@ -325,6 +325,10 @@ input:disabled {
     font-weight: 500;
 }
 
+.img_popup{
+    width: auto !important;
+}
+
 @media (max-width: 820px) {
 
 

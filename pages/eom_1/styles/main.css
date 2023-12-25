@@ -18,7 +18,6 @@ html{
 }
 
 body{
-    background-color: rgba(189, 215, 238, 0.85);
     min-height: 100%;
 }
 
@@ -72,7 +71,6 @@ body{
 .left_side a{
     font-weight: 600;
     color: black;
-    background-color: rgba(189, 215, 238, 0.65);
     position: absolute;
     text-align: center;
     left: 30px;
@@ -280,4 +278,14 @@ body{
         transform: translateY(0);
         margin-left: 0;
     }
+}
+
+.color{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(176, 193, 211, 0.85);
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
